@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+
+
+a {
+text-decoration: none;
+color: rgb(17, 34, 94);
+}
+
+::selection{
+    background-color: rgb(161, 202, 222);
+    }
+
+
+body  {
+    font-family: "roboto mono", monospace, arial;
+    margin: 0;
+    padding: 0;
+    margin-top: 100px;
+    color: rgb(17, 34, 94);
+    background-color: aliceblue;
+
+  }
+
+.fixed-header{
+background-color: rgb(255, 255, 255);
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+display: flex;
+align-items: center;
+height: 60px;
+font-weight: 700;
+border-bottom: 1px solid rgb(17, 34, 94);
+z-index: 100;
+}
+
+
+.left{
+    margin-left: 30px;
+    width: 100%;
+    font-size: 20px;
+}
+
+.right{
+    display: flex;
+    width: 300px;
+    justify-content: space-around;
+}
+
+.nav-li{
+    position: relative;
+    width: max-content;
+}
+
+.nav-li::after {
+    position: absolute;
+    content: '';
+    height: 3px;
+    width: 0;
+    /* background: #705f4b; */
+    background: linear-gradient(to right, #0a3f7f ,  #74abde, #000000);
+    bottom: 0;
+    left: 0;
+    border-radius: 100px;
+    transition: 200ms ease-in-out;
+}
+
+.nav-li:hover::after{
+    width: 100%;
+}
+
+
+.main-flex {
+    display: flex;
+    height: auto;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0 20px;
+    /* background-color: #6583a0; */
+}
+
+.intro {
+
+}
+
+.oscar-png,
+.oscar-png-2 {
+    height: 300px;
+    background-color: #bedcf8;
+    padding: 30px;
+    border-radius: 20px;
+  
+}
+
+h1 , h3  {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.about-sec{
+   margin: 0 auto;
+padding: 0 70px;
+margin-bottom: 200px;
+}
+
+.stats-flex {
+    display: flex;
+    margin: 80px auto;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0 20px;
+} 
+
+.stats-flex li {
+    list-style: none;
+
+}
+
+.oscar-png-2 {
+margin-right: 20px;
+}
+
+.photo-grid{
+    background-color: rgb(255, 255, 255);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px , 1fr)); 
+    column-gap: 30px;
+    row-gap: 25px;
+    margin: 0 20px;
+}
+
+.img-wrapper{
+   box-shadow: 0px 0px 8px black;
+}
+
+.img{
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.img-info {
+    padding: 40px 20px;
+    text-align: center;
+} 
+
+@media only screen and (max-width: 600px) {
+    .main-flex {
+      display: block;
+    }
+    .stats-flex {
+        display: block;
+      }
+     
+  }
+
+
+
+/* {} */
+
